@@ -1,3 +1,5 @@
+package com.algorithmprogram;
+
 /**
  * 
  * Purpose : Binary conversion
