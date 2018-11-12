@@ -30,7 +30,7 @@ public class MergeSort {
     		 */
     		sortstring(a,mid+1,high);
     		//System.out.println(low+" "+mid+" "+high);
-    		Mergefunction.merge(a, low, mid, high);
+    		Mergefunction.mergestring(a, low, mid, high);
     	}
 	
 }
