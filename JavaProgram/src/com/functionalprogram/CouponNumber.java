@@ -9,6 +9,7 @@
  *
  ********************************************************************/
 package com.functionalprogram;
+import com.utility.*;
 import java.util.ArrayList;
 /*
  * here using Random class for generating random number
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 	import java.util.Random;
 import java.util.Scanner;
 	
-	public class Coupon_number {
+	public class CouponNumber {
 	/*
 	 * In main function is used to create a N distinct coupon number
 	 */

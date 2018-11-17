@@ -12,6 +12,7 @@ package com.functionalprogram;
  * here using Scanner class  properties
  */
 import java.util.Scanner;
+import com.utility.*;
 
 public class Factor {
 	/**
@@ -19,11 +20,11 @@ public class Factor {
 	 * 
 	 */
 public static void main(String[] args) {
-	Scanner s=new Scanner(System.in);
-	int num; //initialize the number 
+	int number; //initialize the number 
 	System.out.println("enter the to factor");
-	num=s.nextInt();
-	Utility.factor(num);
-s.close();
+	number=Utility.scanner.nextInt();
+	Utility.factor(number);
+Utility.scanner.close();
+
 }
 }

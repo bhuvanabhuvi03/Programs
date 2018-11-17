@@ -12,6 +12,7 @@ package com.functionalprogram;
  * Here using scanner class properties
  */
 import java.util.Scanner;
+import com.utility.*;
 
 public class Harmonic {
 
@@ -19,13 +20,12 @@ public class Harmonic {
 		/**
 		 * main function calculate harmonic series 
 		 */
-		Scanner s=new Scanner(System.in);
 		int n;//initialize the n value
 		System.out.println("enter the n time");
-		n=s.nextInt();//getting form user
+		n=Utility.scanner.nextInt();//getting form user
 		Utility.harmonic(n);
 		
-s.close();
+		Utility.scanner.close();
 	}
 
 }

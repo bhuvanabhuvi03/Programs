@@ -16,7 +16,7 @@ public static void main(String[] args) {
 	JSONObject company1 = new JSONObject();
 	company1.put("HP", obj1);
 	JSONObject obj2 = new JSONObject();
-	obj2.put("stockname", "mac");
+	obj2.put("stockname", "MAC");
 	obj2.put("number of stock", new Integer(250));
 	obj2.put("share price", new Integer(10));
 	obj2.put("total amount", new Integer(25000));
@@ -24,7 +24,7 @@ public static void main(String[] args) {
 	company2.put("MAC", obj2);
 
 	JSONObject obj3 = new JSONObject();
-	obj3.put("stockname", "sony");
+	obj3.put("stockname", "SONY");
 	obj3.put("number of stock", new Integer(300));
 	obj3.put("share price", new Integer(5));
 	obj3.put("total amount", 1500);

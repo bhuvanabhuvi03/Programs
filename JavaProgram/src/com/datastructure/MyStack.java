@@ -48,6 +48,7 @@ return 0;
 public char peek() {
 	
 	if(size<0) {
+		
 		isempty();
 		
 	}

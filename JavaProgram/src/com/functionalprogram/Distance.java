@@ -12,7 +12,7 @@ package com.functionalprogram;
  * here using Scanner class properties 
  */
 import java.util.Scanner;
-
+import com.utility.*;
 public class Distance {
 	/**
 	 * 

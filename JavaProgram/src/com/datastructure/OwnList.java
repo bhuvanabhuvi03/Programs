@@ -21,10 +21,11 @@ public class OwnList {
 	   
 	
    public static void main(String[] args) throws Exception {
+	   Scanner s=new Scanner(System.in);
    BufferedReader br=new BufferedReader(new FileReader("/home/bridgeit/Desktop/2d/unordered.txt"));
    String st="";
    OwnUorderedList own=new OwnUorderedList();
-   Scanner s=new Scanner(System.in);
+ //  Scanner s=new Scanner(System.in);
    String str;
    while((st=br.readLine())!=null) {
 	  
@@ -32,16 +33,31 @@ public class OwnList {
 	   for(int i=0;i<words.length;i++) {
 		   own.add(words[i]);
 	   }
-   }
+   }boolean b=false;
+   String choice="yes";
+   while(b==false) {
    System.out.println(own);
+   System.out.println("enter the element to be search");
    
-     own.search("sowndar");
+     own.search(s.next());
+     System.out.println(own);
+
+     if(choice.equalsIgnoreCase("yes")) {
+    	 System.out.println("do you want to continue ");
+    	 choice=s.next();
+     }else {
+    	 break;
+     }}   System.out.println(own);
+
+    /*System.out.println(own);
+    System.out.println("enter the element to be search");
+ 
+    own.search(s.next());
     System.out.println(own);
-    
-    own.search("hello");
-    System.out.println(own);
-   own.search("good");
-   System.out.println(own);
+   
+    System.out.println("enter the element to be search");
+
+    own.search(s.next());   System.out.println(own);*/
     }
 
 }

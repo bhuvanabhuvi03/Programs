@@ -1,6 +1,5 @@
 package com.algorithmprogram;
 
-public class Bubble {
+public class FileRead {
 
-	
 }

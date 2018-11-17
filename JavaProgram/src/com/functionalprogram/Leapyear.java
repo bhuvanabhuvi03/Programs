@@ -11,22 +11,20 @@ package com.functionalprogram;
 /*
  * Here using Scanner class properties
  */
-import java.util.Scanner;
-
+import com.utility.*;
 public class Leapyear {
 	/*
 	 * find whether its leap or not
 	 */
 public static void main(String[] args) {
-	Scanner s=new Scanner(System.in );
 	int year; //initialise year
 	
 	System.out.println("enter the year");
 	
-	year=s.nextInt();//getting form user
+	year=Utility.scanner.nextInt();//getting form user
 	
 	//call the utility method to find the leap year or not
-	Utility.findleapyear(year);
-	s.close();
+	Utility.findLeapYear(year);
+	Utility.scanner.close();
 }
 } 

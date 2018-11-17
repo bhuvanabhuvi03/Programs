@@ -64,7 +64,7 @@ boolean add(Object data) {
 	String st="";
 	node t=head;
 	while(t!=null) {
-		System.out.println(t.data+""+(int)t.data%11);
+		System.out.println("("+t.data+","+(int)t.data%11+")");
 		
 		while(t.link!=null)
 		{

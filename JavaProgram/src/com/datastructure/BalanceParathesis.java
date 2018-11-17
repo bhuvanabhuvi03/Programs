@@ -17,6 +17,9 @@ public static void main(String[] args) {
 			//my.push(ch[i]);
 			bb.push(ch[i]);
 		}
+	/*	else if(((char)bb.peek())!=null) {
+			
+		}*/
 		else  if(((char)bb.peek()=='('&&ch[i]==')')||
     		 ((char)bb.peek()=='{'&&ch[i]=='}')
     		 ||((char)bb.peek()=='['&&ch[i]==']'))		{

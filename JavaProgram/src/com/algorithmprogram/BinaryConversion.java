@@ -8,34 +8,33 @@ package com.algorithmprogram;
  * @Since  24-10-2018
  *
  ********************************************************************/
-import java.util.Scanner;
+import com.utility.*;
 /*
  * here using scanner class properties
  */
 
-public class BinaryConv {
+public class BinaryConversion {
 	/*
 	 * main method for convert the decimal to binary
 	 */
 
 	public static void main(String[] args) {
-		Scanner s=new Scanner(System.in);
-		int dec;//initialize the  decimal
+		int decimal;//initialize the  decimal
 		System.out.println("enter the dec number");
-		dec=s.nextInt();//getting the input user
+		decimal=Utility.scanner.nextInt();//getting the input user
 		//call the method
 		boolean b=false;
 		while(b==false) {
-			if(dec<=255)
-			{	Conversion.binary(dec);
+			if(decimal<=255)
+			{	Utility.binary(decimal);
 			b=true;
 			break;
 			}
 			System.out.println("enter only minimum 8 bit not more range is 0 to 255  ");
 			
-			dec=s.nextInt();
+			decimal=Utility.scanner.nextInt();
 		}
-		s.close();
+		Utility.scanner.close();
 	}
 
 }

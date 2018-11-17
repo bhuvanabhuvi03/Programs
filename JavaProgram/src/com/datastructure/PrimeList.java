@@ -65,7 +65,7 @@ int k=0;
  */
 for( i=100-i;i<=1000;i+=100) {
        l=a[x];
-       
+       System.out.println("upto prime number in "+i);
 	for( j=0;j<l;j++ ) {
 		for( k=0;k<2;k++) {
 			if(k==1) {

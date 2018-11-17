@@ -32,7 +32,8 @@ static JSONArray arr=new JSONArray();
 	Object ob = parser.parse(fileread);
 			JSONArray jarr = (JSONArray) ob;
 			// System.out.println(jarr);
-			//System.out.println(jarr.size());
+			System.out.println(jarr.size());
+	System.out.println(jarr);
 			for (int i = 0; i < jarr.size(); i++) {
 				// System.out.println(json);
 
@@ -46,32 +47,26 @@ static JSONArray arr=new JSONArray();
 					json = (JSONObject) jarr.get(i);
 
 					st = (JSONObject) json.get("HP");
-				//	System.out.println(st);
-					System.out.println("stock name " + st.get("stockname") + "\n no of stock "	+ st.get("number of stock") + "\n share price " + st.get("share price"));
-			        map.put("HP", st);
-			        arr.add(map);
-		//	System.out.println(map);
-				} else if (i == 1) {
-					System.out.println(i);
-					json = (JSONObject) jarr.get(i);
+					System.out.println(st);
+					System.out.println("stock name " + st.get("stockname") + "\n no of stock " + st.get("number of stock")
+							+ "\n share price " + st.get("share price"));
+				} 
+				else if (i == 1) {
+				json = (JSONObject) jarr.get(i);
 					st = (JSONObject) json.get("MAC");
-					System.out.println("stock name " + st.get("stockname") + "\n no of stock "+ st.get("number of stock") + "\n share price " + st.get("share price"));
-					map.put( "MAC",st);
-					arr.add(map);
+					System.out.println("stock name " + st.get("stockname") + "\n no of stock " + st.get("number of stock")
+							+ "\n share price " + st.get("share price"));
+
 				} else if (i == 2) {
 
 					json = (JSONObject) jarr.get(i);
 
 					st = (JSONObject) json.get("SONY");
-					System.out.println("stock name " + st.get("stockname") + "\n no of stock "+ st.get("number of stock") + "\n share price " + st.get("share price"));
-					map.put( "SONY",st);
-					arr.add(map);
+					System.out.println("stock name " + st.get("stockname") + "\n no of stock " + st.get("number of stock")
+							+ "\n share price " + st.get("share price"));
+
 				}
 			}
-			//oo.putAll(map);
-			arr.add(map);
-			FinalReport.stockdetail(arr);
-			
 			//JSONArray arr=new JSONArray();
 //			Map<Object, Object> map=new HashMap<>();
 		/*	for(int i=0;i<jarr.size();i++) {

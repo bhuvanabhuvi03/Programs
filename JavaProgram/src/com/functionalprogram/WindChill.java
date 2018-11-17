@@ -13,21 +13,20 @@ package com.functionalprogram;
  * 
  */
 import java.util.Scanner;
-
+import com.utility.*;
 public class WindChill {
 	/*
 	 * find the chillness of the weather of air 
 	 */
 public static void main(String[] args) {
-	Scanner s=new Scanner(System.in);
-	double t;
+	double temperature;
 	System.out.println("enter the temperture (in Fahrenheit)");
 	
-	t=s.nextDouble();   //temperature t (in Fahrenheit) 
-	double v;
+	temperature=Utility.scanner.nextDouble();   //temperature t (in Fahrenheit) 
+	double velocity;
 	System.out.println("enter the wind spped ");
-	v=s.nextDouble(); //he   wind speed v (in miles per hour)
-Utility.windchill(t, v);
-	s.close();
+	velocity=Utility.scanner.nextDouble(); //he   wind speed v (in miles per hour)
+Utility.windChill(temperature, velocity);
+Utility.scanner.close();
 }
 }

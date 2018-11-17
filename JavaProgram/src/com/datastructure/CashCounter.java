@@ -24,12 +24,13 @@ public class CashCounter {
 
 		public static void main(String[] args) {
 	     Scanner s=new Scanner(System.in);
-   	     MyyQueue q=new MyyQueue(5);
+   	    
 	     int ch;
 	     int n;
 	     System.out.println("enter the no. of people in queue");
 	     n=s.nextInt();
 	     String accname[]=new String[n];//initialize the String array
+	     MyyQueue q=new MyyQueue(n);
 	     int l=accname.length;
 	     //System.out.println(l);
 	     System.out.println("enter the list of name " +l);

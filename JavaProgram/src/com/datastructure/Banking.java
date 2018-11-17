@@ -29,11 +29,15 @@ public class Banking {
 			case 1:System.out.println("enter the amount to deposit");
 			        int depositAmount=s.nextInt();
 			        System.out.println("choose person name");
-			       System.out.println("1.sowndar \n 2.ram \n 3.narasi");
+			    //   System.out.println("1.sowndar \n 2.ram \n 3.narasi");
+			        for(int i=0;i<name.length;i++) {
+			        	System.out.println((i+1)+"."+name[i]);
+			        }
 			        int person=s.nextInt();
 			        int depamount=q.depositMoney(depositAmount,person,name[person-1]);
 			        System.out.println(depamount);
 			        locker=locker+depamount;
+			        System.out.println(locker);
 			        break;
 			case 2:System.out.println("enter the amount to withdraw");
 			        int withdraw=s.nextInt();
@@ -41,7 +45,11 @@ public class Banking {
 			        	System.out.println("bank have a insufficent ");
 			        }
 			        System.out.println("choose person name to withdraw");
-			        System.out.println("1.sowndar\n 2.ram \n 3.narasi");
+			    //    System.out.println("1.sowndar\n 2.ram \n 3.narasi");
+			      
+			        
+			        
+			        
 			        int wperson=s.nextInt();
 			        int balance=q.withdraw(withdraw,wperson-1,name[wperson-1]);
 			        if(balance==0)

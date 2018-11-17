@@ -16,7 +16,7 @@ import org.json.simple.parser.ParseException;
 
 public class FinalReport {
 	
-static public void result(JSONArray arr) throws Exception {
+/*static public void result(JSONArray arr) throws Exception {
 	try(FileWriter file=new FileWriter("/home/bridgeit/Desktop/2d/companystock.json")){
 		file.write(arr.toJSONString());
 		file.flush();
@@ -24,9 +24,9 @@ static public void result(JSONArray arr) throws Exception {
 		
 	}
 	
-}
+}*/
 static public void stockdetail(JSONArray arr) throws IOException {
-	try(FileWriter file=new FileWriter("/home/bridgeit/Desktop/2d/stockdetails.json")){
+	try(FileWriter file=new FileWriter("/home/bridgeit/Desktop/2d/companystock.json")){
 		file.write(arr.toJSONString());
 		file.flush();
 		System.out.println("successfully upagraded");
@@ -65,29 +65,29 @@ Object ob = parser.parse(fileread);
 				st = (JSONObject) json.get("HP");
 			//	System.out.println(st);
 				System.out.println("stock name " + st.get("stockname") + "\n no of stock "	+ st.get("number of stock") + "\n share price " + st.get("share price"));
-		        map.put("HP", st);
-		        arr.add(map);
+//		        map.put("HP", st);
+//		        arr.add(map);
 	//	System.out.println(map);
 			} else if (i == 1) {
 				//System.out.println(i);
 				json = (JSONObject) jarr.get(i);
 				st = (JSONObject) json.get("MAC");
 				System.out.println("stock name " + st.get("stockname") + "\n no of stock "+ st.get("number of stock") + "\n share price " + st.get("share price"));
-				map.put( "MAC",st);
-				arr.add(map);
+//				map.put( "MAC",st);
+//				arr.add(map);
 			} else if (i == 2) {
 
 				json = (JSONObject) jarr.get(i);
 
 				st = (JSONObject) json.get("SONY");
 				System.out.println("stock name " + st.get("stockname") + "\n no of stock "+ st.get("number of stock") + "\n share price " + st.get("share price"));
-				map.put( "SONY",st);
-				arr.add(map);
+//				map.put( "SONY",st);
+//				arr.add(map);
 			}
 		}
 		//oo.putAll(map);
-		arr.add(map);
-		FinalReport.stockdetail(arr);
+		//arr.add(map);
+		//FinalReport.stockdetail(arr);
 } catch (FileNotFoundException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -157,6 +157,7 @@ static public void PrintCustomerDetail()
 
 
 static void USerStock() {
+	JSONObject json;
 	JSONParser parser=new JSONParser();
 	try {
 		File file=new File("/home/bridgeit/Desktop/2d/userstock.json");
@@ -169,13 +170,18 @@ static void USerStock() {
 		
 		JSONArray customerfile=(JSONArray) ob;
 	//	System.out.println(customerfile.size());
-	
+	System.out.println(customerfile);
+	System.out.println(customerfile.size());
 		for(int i=0;i<customerfile.size();i++) {
-			JSONObject json=(JSONObject) customerfile.get(i);
-			System.out.println("customer "+(i+1)+"\n"+"ID "+json.get("Id")+"\nname "+json.get("customername")+"\ncontact "+json.get("contact")+ "\nemailid   "+json.get("emailid"));
+			/*if(i==0) 
+			{json=(JSONObject) customerfile.get(i);
+		//	System.out.println(json);
+			JSONObject j=(JSONObject)json.get("1");
+		//	System.out.println(j);
+			System.out.println("customer "+(i+1)+"\n"+"ID "+j.get("Id")+"\nname "+j.get("customername")+"\ncontact "+j.get("contact")+ "\nemailid   "+j.get("emailid"));
 		
-		JSONObject st=(JSONObject)json.get("stock");
-		System.out.println(st);
+		JSONObject st=(JSONObject)j.get("stock");
+	//	System.out.println(st);
 		JSONObject s=(JSONObject)st.get("stock1");
 	//	System.out.println(s);
 		System.out.println("my stock");
@@ -192,10 +198,64 @@ static void USerStock() {
 
 		
 		
-		
-		
-		
+			}
+*/		//	if(i==1) {
+	String a=(i+1)+"";
+			//if(i==0) {
+			json=(JSONObject) customerfile.get(i);
+				//	System.out.println(json);
+			System.out.println(a);
+					JSONObject j=(JSONObject)json.get(a);
+				//	System.out.println(j);
+					System.out.println("customer "+(i+1)+"\n"+"ID "+j.get("Id")+"\nname "+j.get("customername")+"\ncontact "+j.get("contact")+ "\nemailid   "+j.get("emailid"));
+				
+				JSONObject st=(JSONObject)j.get("stock");
+			//	System.out.println(st);
+				JSONObject s=(JSONObject)st.get("stock1");
+			//	System.out.println(s);
+				System.out.println("my stock");
+				System.out.println("stockname  "+s.get("stockname1")+"\nnumber of share"+s.get("number of stock"));
+				JSONObject ss=(JSONObject)st.get("stock2");
+			//	System.out.println(ss);
+				
+				
+				System.out.println("stockname"+ss.get("stockname2")+"\nnumber of share"+ss.get("number of stock"));
+				JSONObject sss=(JSONObject)st.get("stock3");
+			//	System.out.println(s);
+				
+				System.out.println("stockname  "+sss.get("stockname3")+"\nnumber of share"+sss.get("number of stock"));
+
+			//}
+			
+			/*else if(i==1) {
+				json=(JSONObject) customerfile.get(i);
+				//	System.out.println(json);
+					JSONObject j=(JSONObject)json.get("2");
+				//	System.out.println(j);
+					System.out.println("customer "+(i+1)+"\n"+"ID "+j.get("Id")+"\nname "+j.get("customername")+"\ncontact "+j.get("contact")+ "\nemailid   "+j.get("emailid"));
+				
+				JSONObject st=(JSONObject)j.get("stock");
+			//	System.out.println(st);
+				JSONObject s=(JSONObject)st.get("stock1");
+			//	System.out.println(s);
+				System.out.println("my stock");
+				System.out.println("stockname  "+s.get("stockname1")+"\nnumber of share"+s.get("number of stock"));
+				JSONObject ss=(JSONObject)st.get("stock2");
+			//	System.out.println(ss);
+				
+				
+				System.out.println("stockname"+ss.get("stockname2")+"\nnumber of share"+ss.get("number of stock"));
+				JSONObject sss=(JSONObject)st.get("stock3");
+			//	System.out.println(s);
+				
+				System.out.println("stockname  "+sss.get("stockname3")+"\nnumber of share"+sss.get("number of stock"));
+
+			}*/
 		}
+		
+		
+		
+		//}
 		System.out.println("Suceess");
 	} 
 	}

@@ -9,6 +9,7 @@ the start and end clicks
  *
  ********************************************************************/
 package com.functionalprogram;
+import com.utility.*;
 
 /*
  * 
@@ -16,9 +17,8 @@ package com.functionalprogram;
  * 
  */
  
-import java.util.Scanner;
 
-public class Stop_Watch {
+public class StopWatch {
 	
 
 	
@@ -29,13 +29,13 @@ public static void main(String[] args) {
 	/*
 	 * here we calculate in time between lap
 	 */
-	Scanner s=new Scanner(System.in);
+
 	/*
 	 * start function call 
 	 * for getting start time
 	 */
 	
-	double st=Utility.start();
+	double starttime=Utility.start();
 	/**
 	 * str is used to stop the watch
 	 * if you you enter any key stop the time
@@ -43,21 +43,21 @@ public static void main(String[] args) {
 	
 	
 	System.out.println("enter any button to stop");
-	String str=s.nextLine();
+	String str=Utility.scanner.nextLine();
 	/*
 	 * if -condition is used to stop the watch
 	 * here calculate lap time in between the lap
 	 */
 	if(true) {
-		double stt=Utility.stop();
+		double stoptime=Utility.stop();
 	
-	double lap=stt-st;
+	double lap=stoptime-starttime;
 	/*
 	 * print the lap time in milli sec
 	 */
-	System.out.println(stt+ "  "+st);
+	System.out.println(stoptime+ "  "+starttime);
 	System.out.println(lap/1000);
 }
-	s.close();
+	Utility.scanner.close();
 	}
 }

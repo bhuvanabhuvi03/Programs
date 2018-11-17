@@ -12,24 +12,23 @@ package com.algorithmprogram;
  *Here we using Scanner class properties 
  * 
  */
-import java.util.Scanner;
+import com.utility.*;
 
 public class Anagram {
 	/*
 	 * Detecting two string are anagram
 	 */
 public static void main(String[] args) {
-	Scanner s=new Scanner(System.in);
-	checkAnagram c=new checkAnagram();
-	String str1; //initialize the first string 
-	String str2; //initialize the second string
+	//checkAnagram c=new checkAnagram();
+	String string1; //initialize the first string 
+	String string2; //initialize the second string
 	System.out.println("enter first word");
-	str1=s.nextLine(); //getting input form user
+	string1=Utility.scanner.next(); //getting input form user
 	System.out.println("enter second word");
-	str2=s.nextLine();//getting the second form user
+	string2=Utility.scanner.next();//getting the second form user
 	
 	
-	boolean b=c.check(str1,str2);
+	boolean b=Utility.checkAnagram(string1, string2);
 /*
  * if boolean b is true it is anagram
  */
@@ -39,6 +38,6 @@ public static void main(String[] args) {
 }else {
 	System.out.println("its not an anagram");
 }
-	s.close();
+	Utility.scanner.close();
 }
 }

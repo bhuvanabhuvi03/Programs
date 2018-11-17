@@ -27,7 +27,7 @@ public class TicTacTio {
 	 * Printboard display the board to player
 	 */
 	
-	static public void printboard() {
+	static public void printBoard() {
 		System.out.println("/---|---|---\\");
 		System.out.println("| " + board[0] + " | " + board[1] + " | " + board[2] + " |");
 		System.out.println("|-----------|");
@@ -125,8 +125,8 @@ public class TicTacTio {
 		System.out.println("Welcome to 2 Player Tic Tac Toe.");
         System.out.println("--------------------------------");
    //
-      printboard();
-		int num; //initialize number 
+      printBoard();
+		int number; //initialize number 
 		turn="X";
 		int count=0;
 		/*
@@ -141,12 +141,12 @@ public class TicTacTio {
 				 * turn is which one it check
 				 */
 			    if(turn.equalsIgnoreCase("x")) {
-			    	num=s.nextInt();// take a input for player one
+			    	number=s.nextInt();// take a input for player one
 			    }else {
 			    	Random r=new Random();
-			    	num=r.nextInt(10); // take input form randomly for computer
+			    	number=r.nextInt(10); // take input form randomly for computer
 			    }
-				if(!(num>0&&num<=9)) {
+				if(!(number>0&&number<=9)) {
 					System.out.println("invalid number");
 					continue;
 				}
@@ -158,18 +158,18 @@ public class TicTacTio {
 			 * condition help to place index where to you or based on input 
 			 */if(count<9)
 			 {
-			if(board[num-1].equals(String.valueOf(num)))
+			if(board[number-1].equals(String.valueOf(number)))
 			{
-				board[num-1]=turn;
+				board[number-1]=turn;
 				if(turn.equals("X")) {
 					turn="O";
 				}
 				else {
-					System.out.println(num);
+					System.out.println(number);
 					turn="X";
 				}
 				count++;
-				printboard();
+				printBoard();
 				winner=check();
 				 //count for count how anytime its run
 		/*
@@ -180,7 +180,7 @@ public class TicTacTio {
 			}
 			  else 
 			  {
-				System.out.println(num+"Slot already taken; re-enter slot number:");
+				System.out.println(number+"Slot already taken; re-enter slot number:");
 				continue;
 			  }   
 			 }

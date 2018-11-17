@@ -11,16 +11,16 @@ package com.functionalprogram;
 /*\
  * Here using Scanner properties
  */
-import java.util.Scanner;
+
+import com.utility.Utility;
 
 public class Permutation {
 public static void main(String[] args) {
-	Scanner s=new Scanner(System.in);
 	System.out.println("enter the string");
-	String str=s.next(); //permutation string
+	String word=Utility.scanner.next(); //permutation string
 	//call permutation method
 
-	Utility.permutationOfString(str.toCharArray(),0);//spilt the character by character by using tochararray method
-s.close();
+	Utility.permutationOfString(word.toCharArray(),0);//spilt the character by character by using tochararray method
+Utility.scanner.close();
 }
 }

@@ -12,16 +12,15 @@ package com.functionalprogram;
  * Here using Scanner class properties
  */
 import java.util.Scanner;
-
+import com.utility.*;
 public class Power {
 	public static void main(String[] args) {
-		Scanner s=new Scanner(System.in);
 
-		int num;//initialize the number
+		int number;//initialize the number
 	
 		System.out.println("enter the number of time to power");
-		num=s.nextInt();//getting input from user
-		Utility.powerof2(num);
+		number=Utility.scanner.nextInt();//getting input from user
+		Utility.powerOfTwo(number);
 	/*	int a=1;
 		/*
 		 * check entered if less or equal to 32
@@ -45,7 +44,7 @@ public class Power {
 		else {
 			System.out.println("Only works if 0 <= N < 31 since 2^31 overflows an int");
 		}*/
-	s.close();
+	Utility.scanner.close();
 	}
 
 }

@@ -36,9 +36,27 @@ public class OrderListInt {
 		    		ow.add(ar[i]);
 		    	}
 }
-		    
+		    boolean bb=false;
+		    String choice="yes";
+		    while(bb==false) {
 		    System.out.println(ow);
+		    System.out.println("enter the element to be search");
+		    
+		      ow.search(s.nextInt());
+		      System.out.println(ow);
+
+		      if(choice.equalsIgnoreCase("yes")) {
+		     	 System.out.println("do you want to continue ");
+		     	 choice=s.next();
+		      }else {
+		     	 break;
+		      }}   System.out.println(ow);
+
+		    /*System.out.println(ow);
 		    System.out.println("enter the search element ");
+		  
+		    
+		    
 		    ow.search(s.nextInt()); 
           System.out.println(ow);
              System.out.println("enter the search element "); 
@@ -47,4 +65,4 @@ public class OrderListInt {
               System.out.println("enter the search element ");
               ow.search(s.nextInt());
           System.out.println(ow);
-	}}
+*/	}}

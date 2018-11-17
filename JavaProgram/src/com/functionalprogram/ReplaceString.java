@@ -1,7 +1,7 @@
 package com.functionalprogram;
 
 import java.util.Scanner;
-
+import com.utility.*;
 public class ReplaceString {
 
 
@@ -12,7 +12,6 @@ public class ReplaceString {
 	 * 
 	 */
 		public static void main(String[] args) {
-		Scanner s=new Scanner(System.in);
 		/**
 		 * str is string variable to store the string value
 		 */
@@ -23,12 +22,12 @@ public class ReplaceString {
 		System.out.println("enter the user name");
 
       //initialize the new string to replace the old string
-		String str=s.nextLine();
+		String replaceString=Utility.scanner.nextLine();
 		/*
 		 * if -condition checks entered string range more than 3
 		 */
 //		boolean b=false;
-        Utility.replacestring(str,words);
+        Utility.replaceString(replaceString,words);
 	
   /*      while(!(str.length()>=3))
 		{
@@ -51,7 +50,7 @@ public class ReplaceString {
 	*/	
 		
 		
-         s.close();
+        Utility.scanner.close();
 	}
 	
 

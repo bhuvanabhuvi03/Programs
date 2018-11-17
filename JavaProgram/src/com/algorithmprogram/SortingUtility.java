@@ -1,8 +1,8 @@
 package com.algorithmprogram;
 
 import java.util.Scanner;
-
-public class MainUtility {
+import com.utility.*;
+public class SortingUtility {
 
 	public static void main(String[] args) {
 		double aaint[]=new double[3];
@@ -15,17 +15,18 @@ public class MainUtility {
   //initialize the start time in  long form default package in java 
    double stbu=System.nanoTime();//start time taken in  long form default package in java
 
-	Bubble bb=new Bubble();
+	//Bubble bb=new Bubble();
 	// call the sort method over here
 
-	bb.bubblesortinteger(arbu);
+           Utility.bubbleSortInteger(arbu);
 	//initialize the stop time 
 	
 	/*
 	 * this iteration for display the sorted array
 	 */
+           System.out.println("after soerting ");
 	for(int i=0;i<arbu.length;i++) {
-		System.out.println(arbu[i]);
+		System.out.print(arbu[i]);
 	}
 
 
@@ -49,12 +50,14 @@ public class MainUtility {
 	
 	// call the sort method over here
 
-	bb.bubblesortstring(stbuu);
+	Utility.bubbleSortString(stbuu);
 	/*
 	 * this iteration for display the sorted array
 	 */
+    System.out.println("after soerting ");
+
 	for(int i=0;i<stbuu.length;i++) {
-		System.out.println(stbuu[i]);
+		System.out.print(stbuu[i]+" ");
 	}
 	double ssb=System.nanoTime();//stop time taken in  long form default package in java
 	//initialize elapsed time in between of start time to stop time
@@ -77,11 +80,13 @@ System.out.println();
 	double starttime=System.nanoTime();//start time taken in  long form default package in java
 	// call the sort method over here
 
-	ss.sortint(arrin);
+	Utility.sortint(arrin);
 	/*
 	 * display the method
 	 */
 	int n = arrin.length; 
+    System.out.println("after soerting ");
+
 	for (int i=0; i<n; ++i) 
 	           System.out.print(arrin[i] + " ");
 	
@@ -101,11 +106,13 @@ System.out.println();
 
 	// call the sort method over here
 
-	ss.sortString(stin);
+	Utility.sortString(stin);
 	int a = arrin.length; 
 	/*
 	 * display the method
 	 */
+    System.out.println("after sorting ");
+
 	for (int i=0; i<a; ++i) 
 	           System.out.print(stin[i] + " ");
 	System.out.println();
@@ -138,7 +145,7 @@ System.out.println("binary search");
 	//initialize the start time in  long form default package in java 
 	double st=System.nanoTime();//start time taken in  long form default package in java
 	// call the search method over here
-	inSearch.searchint(ar,0,ar.length, key);
+	Utility.searchint(ar,0,ar.length, key);
 	//initialize the stop time 
 	
 	double sss=System.nanoTime();//stop time taken in  long form default package in java
@@ -159,7 +166,7 @@ System.out.println("binary search");
 	
 	double st2=System.nanoTime();//start time taken in  long form default package in java
 	// call the search method over here
-	inSearch.searchstr(str,str1,0,str.length);
+	Utility.searchstr(str,str1,0,str.length);
 	//initialize the stop time in  long form default package in java 
 
 	double ss2=System.nanoTime();//stop time taken in  long form default package in java
@@ -174,7 +181,7 @@ System.out.println("binary search");
 	for(int i=0;i<aaint.length;i++) {
 		System.out.print(aaint[i]+" ");
 	}
-	Sortt.sortd(aaint);
+	Utility.sortd(aaint);
 	System.out.println();
 	System.out.println("after arranging ");
 	for(int i=aaint.length-1;i>=0;i--) {
@@ -185,7 +192,7 @@ System.out.println("binary search");
 	for(int i=0;i<aastr.length;i++) {
 		System.out.print(aastr[i]+" ");
 	}
-	Sortt.sortd(aastr);
+	Utility.sortd(aastr);
 	System.out.println();
 	System.out.println("after arranging ");
 

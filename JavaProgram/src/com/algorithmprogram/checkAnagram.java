@@ -1,12 +1,6 @@
 package com.algorithmprogram;
 
 public class checkAnagram {
-	/**
-	 * 
-	 * @param s1
-	 * @param s2
-	 * @return true or false
-	 */
     static public boolean check(String s1,String s2){
     	int count1[]=new int[26];//initialize the count1 array
     	int count2[]=new int[26];//initialize the count2 array

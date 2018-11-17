@@ -15,7 +15,7 @@ public class Tree {
 		long fact = 1;
 		for (int i = 1; i <= y; i++) {
 			fact = fact * i;
-			System.out.println(fact);
+			//System.out.println(fact);
 		}
 		return fact;
 	}

@@ -68,7 +68,7 @@ public class MyQueuee {
 	  {
 		  if(rear==-1)
 			  return 0;
-		  return rear;
+		  return rear+1;
 	  }
 	  /**
 	   * 
