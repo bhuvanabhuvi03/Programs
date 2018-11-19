@@ -14,6 +14,7 @@ public class MyStack {
 public void push(char ch)
 
 {  
+	
 st[++size]=ch;
 
 //System.out.println(ch);
@@ -30,7 +31,9 @@ public void push(int n) {
  * pop out the element into stack
  */
 public char pop() {
-	
+	if(size==-1) {
+		System.out.println("overflow");
+	}
 //	System.out.println("sk");
 	return st[size--];
 }
@@ -49,7 +52,8 @@ public char peek() {
 	
 	if(size<0) {
 		
-		isempty();
+		
+		return 'z';
 		
 	}
 	return st[size];

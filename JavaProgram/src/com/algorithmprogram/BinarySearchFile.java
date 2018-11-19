@@ -18,27 +18,14 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
+import com.utility.Utility;
+import com.utility.*;
 public class BinarySearchFile {
-	static Scanner s=new Scanner(System.in);
 
 public static void main(String[] args) throws Exception {
-	BufferedReader br=new BufferedReader(new FileReader("/home/bridgeit/Desktop/2d/test.txt"));
-	//FileReader f=new FileReader("/home/bridgeit/Desktop/2d/test.txt");
-	String str="";//initialize the string as empty
-	//String a[]=new String[200];//initialize the array 
-	/*
-	 * reading all the line in the file
-	 */
-	while((str=br.readLine())!=null) {
-
-	String a[]=str.split(" ");//spilt by space
-	for(int i=0;i<a.length;i++) {
-		System.out.println(a[i]);
-	}
-	System.out.println();
+	String stringarray[]=FileRead.readFile();
 	System.out.println("sort list is");
-sortstring(a);
-break;
+sortstring(stringarray);
 	}
 	//call the sort method
 	//Sortt.sortString(a);
@@ -50,31 +37,31 @@ break;
 	
 	
 	
-}
-public static void sortstring(String a[]) {
 
-	String temp;
-	for(int i=0;i<a.length;i++) {
-		for(int j=i+1;j<a.length;j++) {
-			if(a[i].compareTo(a[j])>0) {
-				temp=a[i];
-				a[i]=a[j];
-				a[j]=temp;
+public static void sortstring(String stringarray[]) {
+
+	String tempoary;
+	for(int i=0;i<stringarray.length;i++) {
+		for(int j=i+1;j<stringarray.length;j++) {
+			if(stringarray[i].compareTo(stringarray[j])>0) {
+				tempoary=stringarray[i];
+				stringarray[i]=stringarray[j];
+				stringarray[j]=tempoary;
 			}
 		}
 	
 		
 		
 	}
-	for(int i=0;i<a.length;i++) {
-		System.out.println(a[i]);
+	for(int i=0;i<stringarray.length;i++) {
+		System.out.println(stringarray[i]);
 	}
-	String str1;//initialize the string
+	String searchElement;//initialize the string
 	System.out.println("enter the string to search");
-	str1=s.nextLine();//getting form user
+	searchElement=Utility.scanner.nextLine();//getting form user
 	//call the method to search
 
-		inSearch.searchstr(a,str1,0,a.length-1);
+		Utility.searchstr(stringarray,searchElement,0,stringarray.length-1);
 
 }
 

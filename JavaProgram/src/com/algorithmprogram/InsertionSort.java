@@ -29,7 +29,7 @@ public static void main(String[] args) {
 	double starttime=System.nanoTime();//start time taken in  long form default package in java
 	// call the sort method over here
 
-	Utility.sortint(number);
+	Utility.sortInt(number);
 	/*
 	 * display the method
 	 */

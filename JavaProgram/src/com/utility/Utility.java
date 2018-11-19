@@ -761,7 +761,8 @@ public static void binary(int decimalnumber) {
 	  * @param number
 	  * array contain array of integer 
 	  */
-static public void sortint(int number[]){
+static public void sortInt(int number[]){
+	
 
 	int l=number.length;//initialize length  
 	/*this iteration
@@ -809,7 +810,7 @@ static public void sortint(int number[]){
 			}
 	
 	//******************************************************
-	static public void sortd(double a[]){
+	static public void sortTime(double a[]){
 
 		int l=a.length;//initialize length  
 		/*this iteration
@@ -953,7 +954,7 @@ public static void findSearchElement(int number[]) {
 	int low = 0;
 	int high = number.length;
 	int mid = (low + high) / 2;
-	int ch;
+	int choice;
 	// System.out.println("1.lesser than"+a[(low+high)/2]+"\n 2.greater than
 	// "+a[(low+high)/2]+"\n3.quess number is"+a[(low+high)/2]);
 	int flag = 1;
@@ -968,12 +969,12 @@ public static void findSearchElement(int number[]) {
 			System.out.println("1.lesser than" + number[(low + high) / 2] + "\n 2.greater than " + number[(low + high) / 2]
 					+ "\n3. i think ur guess number is" + number[(low + high) / 2]);
 			System.out.println("enter the choice");
-			ch = Utility.scanner.nextInt();
-			if (ch == 1) {
+			choice = Utility.scanner.nextInt();
+			if (choice == 1) {
 				System.out.println("ss");
 				high = ((low + high) / 2);
 				System.out.println(number[high]);
-			} else if (ch == 2) {
+			} else if (choice == 2) {
 				low = (low + high) / 2;
 			}
 //	if(a[high]==a[low]) {
@@ -981,7 +982,7 @@ public static void findSearchElement(int number[]) {
 			// flag--;
 			// break;
 			// }
-			else if (ch == 3) {
+			else if (choice == 3) {
 				System.out.println(" this is  ur guess number is" + number[(low + high) / 2]);
 				flag--;
 				break;

@@ -28,23 +28,29 @@ boolean enqueue(String name) {
  * @param op
  * @return boolean true or false
  */
-int bankacc(int amount,int op) {
+boolean bankacc(int amount,int op) {
     if(op==1)
 	{bal=bal+amount;
-	
-	return bal;
+	System.out.println("take your cash"+bal);
+	return true;
 	}
     else if(op==2) {
+    	if(amount>bal) {
+    		System.out.println("bank have this much amount"+bal);
+    	return false;
+    	}
     	if(amount<bal) {
+    		
     		bal=bal-amount;
-    		return bal;
+    		System.out.println(bal);
+    		return true;
     	}else {
     		System.out.println("bank have insufficent amount");
-    		return 0;
+    		return false;
     	}
     	
     	}
-return 0;}
+return true;}
 
 /*
  * delete the element in the queue 

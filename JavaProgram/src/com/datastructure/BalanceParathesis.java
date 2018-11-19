@@ -9,6 +9,7 @@ public static void main(String[] args) {
 	System.out.println("enter the expression");
 	exp=s.nextLine();
 	MyStack my=new MyStack();
+//	int flag=0;
 	Bal bb=new Bal(10);
 	int flag=0;
 	char ch[]=exp.toCharArray();
@@ -28,10 +29,16 @@ public static void main(String[] args) {
 			bb.pop();
   //    System.out.println(my.pop()); 	 
      }
+		else if((char)bb.peek()=='a') {
+		
+			flag++;
+			bb.pop();
+			break;
+		}
 
 		}
 	boolean b=bb.isEmpty();
-	if(b==true) {
+	if(b==true&& flag==0) {
 		System.out.println("it is balanced");
 	}else
 	{

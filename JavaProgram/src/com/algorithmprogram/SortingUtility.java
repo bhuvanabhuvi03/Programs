@@ -80,7 +80,8 @@ System.out.println();
 	double starttime=System.nanoTime();//start time taken in  long form default package in java
 	// call the sort method over here
 
-	Utility.sortint(arrin);
+	Utility.sortInt(arrin);
+	
 	/*
 	 * display the method
 	 */
@@ -129,7 +130,7 @@ System.out.println();
 	System.out.println("lap time is"+epi/1000000);
 System.out.println("binary search");
 
-	inSearch ii=new inSearch();
+	//inSearch ii=new inSearch();
 	
 	//initialize  the array of string
 	String str[]= {"aaaa","bbbb","cccc","dddd","eeee","ffff","gggg"};
@@ -181,7 +182,7 @@ System.out.println("binary search");
 	for(int i=0;i<aaint.length;i++) {
 		System.out.print(aaint[i]+" ");
 	}
-	Utility.sortd(aaint);
+	Utility.sortTime(aaint);
 	System.out.println();
 	System.out.println("after arranging ");
 	for(int i=aaint.length-1;i>=0;i--) {
@@ -192,8 +193,8 @@ System.out.println("binary search");
 	for(int i=0;i<aastr.length;i++) {
 		System.out.print(aastr[i]+" ");
 	}
-	Utility.sortd(aastr);
-	System.out.println();
+	Utility.sortTime(aastr);
+//	System.out.pintln();
 	System.out.println("after arranging ");
 
 	for(int i=aastr.length-1;i>=0;i--) {

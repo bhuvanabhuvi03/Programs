@@ -61,8 +61,8 @@ public class CashCounter {
 			{
 			case 1:System.out.println("enter the amount to deposit");
 			        int depositAmount=s.nextInt();
-			        int depamount=q.bankacc(depositAmount,ch);
-			        System.out.println("balance in bank  "+depamount);
+			        q.bankacc(depositAmount,ch);
+			       // System.out.println("balance in bank  "+depamount);
 			        d=n--;
 			        q.dequeue();
 			        break;
@@ -70,17 +70,17 @@ public class CashCounter {
 			        int withdraw=s.nextInt();
 			      
 			      
-			        int balance=q.bankacc(withdraw, ch);
-			      System.out.println("remaining balance in bank  "+balance+"\n and your withdrawal money of yours is "+withdraw);
+			        if(q.bankacc(withdraw, ch)==true) {
+			      //System.out.println("remaining balance in bank  "+balance+"\n and your withdrawal money of yours is "+withdraw);
 			        d=n--;
-			        q.dequeue();
+			        q.dequeue();}
 			        break;
 			case 3:System.out.println("no of people in queue is "+q.issize());  
 			         break;
 			case 4:
 				System.exit(0);
 			}
-		}while(ch<4);
+		}while(q.issize()>0);
 	}
 
 }
