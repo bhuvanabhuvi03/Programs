@@ -9,6 +9,7 @@
  ********************************************************************/
 package com.functionalprogram;
 import java.util.Scanner;
+import com.utility.*;
 /*
  * Here using Scanner class properties 
  */
@@ -21,15 +22,14 @@ public class Gambler {
 	 * 
 	 */
 public static void main(String[] args) {
-	Scanner s=new Scanner(System.in);
 
 	double ntime;     //initialize the number time can play one day
 	
 	
 	System.out.println("enter the no of time to play one day");
-	ntime=s.nextInt(); //getting form user
+	ntime=Utility.s.nextInt(); //getting form user
 	Utility.Gambler(ntime);
 	
-s.close();
+Utility.s.close();
 }
 }

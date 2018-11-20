@@ -18,7 +18,7 @@ public class Customer {
 	
 	
 	static 	JSONArray al=new JSONArray();
-
+static JSONArray jsonarray=new JSONArray();
 	static Scanner s=new Scanner(System.in);
 private String customername;
 private String mobilenum;
@@ -105,7 +105,45 @@ Customer customer1=new Customer();
      			}	
      	
     	
-    	
+     		 long customer1stock=0;
+     		 long customer2stock=0;
+     		 long customer3stock=0;
+     	JSONObject jsoncustomerid=new JSONObject();
+    		JSONObject jsoncustomer=new JSONObject();
+    		jsoncustomer.put("customername", customer1.getCustomername());
+    		jsoncustomer.put("Id", customer1.getId());
+    		jsoncustomer.put("emailid",customer1.getEmailid());
+    		jsoncustomer.put("contact", customer1.getMobilenum());
+    		System.out.println(jsoncustomer);
+			JSONObject stock=new JSONObject();
+			JSONObject product1=new JSONObject();
+			product1.put("stockname1", "HP");
+			product1.put("number of stock", customer1stock);
+
+			
+			
+			
+			JSONObject product2=new JSONObject();
+		    product2.put("stockname2", "MAC");
+			product2.put("number of stock", customer2stock);
+			JSONObject product3=new JSONObject();
+    		product3.put("stockname3", "SONY");
+    		product3.put("number of stock", customer3stock);
+    		JSONArray jsar=new JSONArray();
+    		jsar.add(jsoncustomer);
+    		
+    		
+			stock.put("stock1", product1);
+			stock.put("stock2", product2);
+			stock.put("stock3", product3);
+
+    		jsoncustomer.put("stock", stock);
+    		jsoncustomerid.put(customer1.getId(), jsoncustomer);
+    		jsonarray.add(jsoncustomerid);
+    		
+    		
+    		FinalReport.user(jsonarray);
+    			
         	System.out.println("successfully upgraded" );
         } catch (IOException e) {
     		// TODO Auto-generated catch block
@@ -128,7 +166,7 @@ Customer customer1=new Customer();
     	 
     	 
     	 
-    	 
+     	}
   
      	
      	
@@ -194,5 +232,5 @@ Customer customer1=new Customer();
 		
 		
 
-}
+
 

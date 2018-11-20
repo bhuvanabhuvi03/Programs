@@ -25,6 +25,7 @@ public class binarySearch {
 	
 	//initialize  the array of string
 	String str[]= {"aaaa","bbbb","cccc","dddd","eeee","ffff","gggg"};
+	
 	//initialize  the array of integer
 	int ar[]= {1,2,3,4,5};
 	//initialize the key value to search
@@ -35,12 +36,12 @@ public class binarySearch {
 	//getting form the user
 	key=s.nextInt();
 	//initialize the start time in  long form default package in java 
-	long st=System.currentTimeMillis();//start time taken in  long form default package in java
+	long st=System.nanoTime();//start time taken in  long form default package in java
 	// call the search method over here
 	inSearch.searchint(ar,0,ar.length, key);
 	//initialize the stop time 
 	
-	long ss=System.currentTimeMillis();//stop time taken in  long form default package in java
+	long ss=System.nanoTime();//stop time taken in  long form default package in java
 	
 	//initialize elapsed time in between of start time to stop time
 	long ep=ss-st;
@@ -55,12 +56,12 @@ public class binarySearch {
 	str1=s.next();//getting form user 
 	//initialize the start time in  long form default package in java 
 	
-	long st2=System.currentTimeMillis();//start time taken in  long form default package in java
+	long st2=System.nanoTime();//start time taken in  long form default package in java
 	// call the search method over here
 	inSearch.searchstr(str,str1,0,str.length);
 	//initialize the stop time in  long form default package in java 
 
-	long ss2=System.currentTimeMillis();//stop time taken in  long form default package in java
+	long ss2=System.nanoTime();//stop time taken in  long form default package in java
 	//initialize elapsed time in between of start time to stop time
 
 	long ep1=ss2-st2;

@@ -273,6 +273,20 @@ static void USerStock() {
 	
 	
 }
-
+public static void user(JSONArray al) {
+	try(FileWriter fileread=new FileWriter("/home/bridgeit/Desktop/2d/userstock.json"))
+	{
+		
+		fileread.write(al.toString());
+		fileread.flush();
+		System.out.println("succes");
+		
+		
+		
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}
 
 }
