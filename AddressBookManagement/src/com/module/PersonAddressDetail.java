@@ -2,7 +2,7 @@ package com.module;
 
 public class PersonAddressDetail {
 private String city;
-private String zipcode;
+private long zipcode;
 private String state;
 private String phonenumber;
 public String getCity() {
@@ -11,11 +11,11 @@ public String getCity() {
 public void setCity(String city) {
 	this.city = city;
 }
-public String getZipcode() {
+public long getZipcode() {
 	return zipcode;
 }
-public void setZipcode(String zipcode) {
-	this.zipcode = zipcode;
+public void setZipcode(long zipcode2) {
+	this.zipcode = zipcode2;
 }
 public String getState() {
 	return state;

@@ -1,5 +1,6 @@
 package com.interfaceimplementation;
 
+import java.awt.List;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -11,59 +12,91 @@ import java.util.Scanner;
 import org.codehaus.jackson.JsonFactory;
 import org.codehaus.jackson.JsonParser;
 import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.type.TypeReference;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import com.module.PersonDetail;
+import com.utility.FileReadAndWrite;
 
 public class AddressBookManagerImplem  implements AddressBookManager{
 	Scanner s=new Scanner(System.in);
 
 	@Override
-	public ArrayList<Object> createAddressBook(String filename) {
+	public ArrayList<PersonDetail> createAddressBook() {
 		
 		AddressBookImplementation addressbook=new AddressBookImplementation();
 		
 		
-		return addressbook.addPerson(filename);
+		return addressbook.addPerson();
 	}
 
 	@Override
-	public void open(String filename) {
-		System.out.println(filename);
-		JSONParser jsonParser=new JSONParser();
-		File f=new File(filename);
-		try {
-			Object o=(Object)jsonParser.parse(new FileReader(f));
-			
-			JSONArray jsonArray=(JSONArray)o;
-			System.out.println(jsonArray);
-			JSONObject jb=(JSONObject)jsonArray.get(0);
-			System.out.println(jb);
-		} catch (IOException | ParseException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+	public ArrayList<PersonDetail> open() {
+		System.out.println("openbook");
+		File ff=new File("/home/bridgeit/Desktop/2d/address/");
+		File[] fi=ff.listFiles();
+//		int i=0;
+for (File file2 : fi) {
+	file2.getName();
+	System.out.println(file2.getName());
+}
+//	int choice;
+	System.out.println("enter your choice");
+
+	String filee="/home/bridgeit/Desktop/2d/address/"+s.next();
+	
+	JSONParser jsonParser=new JSONParser();
+	ArrayList<PersonDetail> list=new ArrayList<>();
+	System.out.println("which person you want to edit");
+	FileReadAndWrite.readbook(filee);
+String name;
+	ObjectMapper mapper=new ObjectMapper();
+	Object o;
+	try {
+		o = (Object)jsonParser.parse(new FileReader(filee));
+		JSONArray jsonArray=(JSONArray)o;
+		//	System.out.println(jsonArray);
+			//JSONObject jb=(JSONObject)jsonArray.get(0);
+	/*		for (int i = 0; i < jsonArray.size(); i++) {
+		list.add(mapper.readValue(jsonArray.get(i).toString(), PersonDetail.class));}
+			*/
+	
+			list=mapper.readValue(new File(filee), new TypeReference<ArrayList<PersonDetail>>() {
+				
+			});
 		
-		ArrayList<Object>list=new ArrayList<>();
-		ObjectMapper mapper=new ObjectMapper();
-		JsonFactory jfactory = new JsonFactory();
-        JsonParser jParser;
-		try {
-			jParser = jfactory.createJsonParser(new File(filename));
-		//     list= Arrays.asList(mapper.readValue(jParser, PersonDetail.class));
-System.out.println(list);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
+		
+	}catch (IOException | ParseException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	System.out.println(list);
+	return list;
+	}
+	public String  openBook() {
+		System.out.println("openbook");
+		File ff=new File("/home/bridgeit/Desktop/2d/address/");
+		File[] fi=ff.listFiles();
+//		int i=0;
+for (File file2 : fi) {
+	file2.getName();
+	System.out.println(file2.getName());
+}
+//	int choice;
+	System.out.println("enter your choice");
 
+	String filee="/home/bridgeit/Desktop/2d/address/"+s.next();
+
+		
+		return filee;
 	}
 
 	@Override
-	public void save(ArrayList< Object>list,String file) {
+	public void save(ArrayList< PersonDetail>list,String file) {
 		// TODO Auto-generated method stub
 			FileReadAndWrite.fileWrites(list, file);
 

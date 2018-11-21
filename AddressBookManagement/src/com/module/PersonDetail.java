@@ -1,6 +1,6 @@
 package com.module;
 
-public class PersonDetail {
+public class PersonDetail implements Comparable<PersonDetail>{
 
 	
 	private String firstName;
@@ -29,6 +29,11 @@ public class PersonDetail {
 	public String toString() {
 		return "PersonDetail [firstName=" + firstName + ", lastName=" + lastName + ", Address=" + personaddress
 				+ "]";
+	}
+	@Override
+	public int compareTo(PersonDetail o) {
+int comparezip=(int)o.getPersonaddress().getZipcode();
+		return (int) (this.personaddress.getZipcode()-comparezip);
 	}
 	
 }
