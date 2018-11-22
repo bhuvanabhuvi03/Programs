@@ -2,6 +2,11 @@
 package com.interfaceimplementation;
 
 public class Doctor {
+@Override
+	public String toString() {
+		return "Doctor [name=" + name + ", specialization=" + specialization + ", avability=" + avability + ", id=" + id
+				+ ", numbeOfPatient=" + numbeOfPatient + "]";
+	}
 private String name;
 private String specialization;
 
