@@ -15,7 +15,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.Scanner;
 
-public class OrderListInt {
+public class OrderList {
 	public static void main(String[] args) throws Exception {
 		 BufferedReader b=new BufferedReader(new FileReader("/home/bridgeit/Desktop/2d/o.txt"));
 		 OwnOrderList1 ow=new OwnOrderList1();   

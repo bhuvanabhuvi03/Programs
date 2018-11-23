@@ -1,10 +1,10 @@
 /**
  * 
- * Purpose : Calendar Program    
+ * Purpose :find the day of the date     
  * 
  * @author sowndara perumal
  * @version 1.2
- * @Since  27-10-2018
+ * @Since  28-10-2018
  *
  ********************************************************************/
 
@@ -14,9 +14,7 @@ package com.datastructure;
  */
 import java.util.Scanner;
 
-
-
-public class Cal {
+public class CalendarQueuemain {
 
 	public static void main(String[] args) {
 		Scanner s=new Scanner(System.in);
@@ -25,8 +23,7 @@ public class Cal {
 		int year=s.nextInt();
 		System.out.println("enter the month");
 		String month=s.next();
-	//call the find day method	
-		Day.findday(year,month);
-	}
-
+//call find day method		
+		CalQday.findday(year,month);
+}
 }

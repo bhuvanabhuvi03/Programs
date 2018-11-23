@@ -2,7 +2,7 @@ package com.datastructure;
 
 import java.util.Scanner;
 
-public class CalDisplay {
+public class CalendarDisplay {
 	/**
 	 * 
 	 * @param m index value for calendar start

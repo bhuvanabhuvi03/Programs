@@ -1,10 +1,10 @@
 package com.datastructure;
 
-public class Bal {
+public class BalanceQueue {
 	
 	Object obj[];
 	int top=-1,cap=0;
-	public Bal(int scap) {
+	public BalanceQueue(int scap) {
 		this.cap=scap;
 		obj=new Object[cap];
 	}

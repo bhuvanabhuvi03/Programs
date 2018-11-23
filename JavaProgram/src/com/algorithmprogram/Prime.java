@@ -15,17 +15,17 @@ package com.algorithmprogram;
  */
 import java.util.Scanner;
 
+import com.utility.Utility;
+
 public class Prime {
 	/*
 	 * 
 	 *find the prime number in between range 
 	 */
 public static void main(String[] args) {
-	Scanner s=new Scanner(System.in);
-	int n=1000;// initialize the n value
-	primeno p=new primeno();
-	p.range(n);
-	
-	s.close();
+int number=1000;// initialize the n value
+	PrimeNumber prime=new PrimeNumber();
+	prime.range(number);
+	Utility.scanner.close();
 }
 }

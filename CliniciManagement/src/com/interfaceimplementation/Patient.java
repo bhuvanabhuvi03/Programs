@@ -4,13 +4,12 @@ public class Patient {
 
 	@Override
 	public String toString() {
-		return "Patient [name=" + name + ", moblienumber=" + moblienumber + ", id=" + id + ", count=" + count + ", age="
+		return "Patient [name=" + name + ", moblienumber=" + moblienumber + ", id=" + id  + ", age="
 				+ age + "]";
 	}
 	private String name;
 	private String  moblienumber;
 	private int id;
-    private int count;
     private int age;
     
 	public String getName() {
@@ -31,12 +30,7 @@ public class Patient {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getCount() {
-		return count;
-	}
-	public void setCount(int count) {
-		this.count = count;
-	}
+	
 	public int getAge() {
 		return age;
 	}

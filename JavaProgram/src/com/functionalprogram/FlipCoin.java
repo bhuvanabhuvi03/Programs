@@ -33,7 +33,7 @@ public static void main(String[] args) {
 	 */
 	int times;
 	System.out.println("enter the no of time ");
-	times=Utility.s.nextInt();
+	times=Utility.scanner.nextInt();
 	Utility.coin(times);
 	
 /*	double head=0;
@@ -68,6 +68,6 @@ while(!(times>0)) {
 	System.out.println("perfectage of head "+ph);
 	*/
 	
-	Utility.s.close();
+	Utility.scanner.close();
 }
 }

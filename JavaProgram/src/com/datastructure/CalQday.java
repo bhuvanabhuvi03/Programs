@@ -4,7 +4,7 @@ package com.datastructure;
  * calculate year code , month code 
  */
 public class CalQday {
-	static CalDisplay c = new CalDisplay();
+	static CalendarDisplay c = new CalendarDisplay();
 	public static int t = 0;
 
 	static void findday(int year, String month) {

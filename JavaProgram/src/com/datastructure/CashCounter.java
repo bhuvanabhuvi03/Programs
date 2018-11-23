@@ -25,12 +25,12 @@ public class CashCounter {
 		public static void main(String[] args) {
 	     Scanner s=new Scanner(System.in);
    	    
-	     int ch;
-	     int n;
+	     int choice;
+	     int numberOfPerson;
 	     System.out.println("enter the no. of people in queue");
-	     n=s.nextInt();
-	     String accname[]=new String[n];//initialize the String array
-	     MyyQueue q=new MyyQueue(n);
+	     numberOfPerson=s.nextInt();
+	     String accname[]=new String[numberOfPerson];//initialize the String array
+	     MyyQueue q=new MyyQueue(numberOfPerson);
 	     int l=accname.length;
 	     //System.out.println(l);
 	     System.out.println("enter the list of name " +l);
@@ -39,7 +39,7 @@ public class CashCounter {
 	    	 accname[i]=s.next();
 	    	 q.enqueue(accname[i]);
 	     }
-	    int d=n;
+	    int d=numberOfPerson;
 	    /*
 	     * iterating of the customer to do what they want like withdraw and deposit
 	     */
@@ -49,7 +49,7 @@ public class CashCounter {
 			
 			System.out.println("enter ur choice");
 			System.out.println("1.deposit \n2.withdraw \n3.No of people \n 4.exit");
-			ch=s.nextInt();
+			choice=s.nextInt();
 			/*
 			 * switch case used for choose the option
 			 *case 1 for withdraw
@@ -57,22 +57,22 @@ public class CashCounter {
 			 *case 3 for check the queue 
 			 *
 			 */
-			switch(ch)
+			switch(choice)
 			{
 			case 1:System.out.println("enter the amount to deposit");
 			        int depositAmount=s.nextInt();
-			        q.bankacc(depositAmount,ch);
+			        q.bankacc(depositAmount,choice);
 			       // System.out.println("balance in bank  "+depamount);
-			        d=n--;
+			        d=numberOfPerson--;
 			        q.dequeue();
 			        break;
 			case 2:System.out.println("enter the amount to withdraw");
 			        int withdraw=s.nextInt();
 			      
 			      
-			        if(q.bankacc(withdraw, ch)==true) {
+			        if(q.bankacc(withdraw, choice)==true) {
 			      //System.out.println("remaining balance in bank  "+balance+"\n and your withdrawal money of yours is "+withdraw);
-			        d=n--;
+			        d=numberOfPerson--;
 			        q.dequeue();}
 			        break;
 			case 3:System.out.println("no of people in queue is "+q.issize());  

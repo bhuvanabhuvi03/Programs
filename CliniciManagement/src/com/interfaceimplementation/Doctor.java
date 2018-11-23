@@ -13,7 +13,7 @@ private String specialization;
 private String avability;
 
 private  int id;
-private int numbeOfPatient;
+private int numbeOfPatient=0;
 public String getName() {
 	return name;
 }

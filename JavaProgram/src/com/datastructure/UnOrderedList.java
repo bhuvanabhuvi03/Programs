@@ -17,7 +17,7 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class OwnList {
+public class UnOrderedList {
 	   
 	
    public static void main(String[] args) throws Exception {

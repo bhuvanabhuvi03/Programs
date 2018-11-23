@@ -27,9 +27,9 @@ public static void main(String[] args) {
 	
 	
 	System.out.println("enter the no of time to play one day");
-	ntime=Utility.s.nextInt(); //getting form user
+	ntime=Utility.scanner.nextInt(); //getting form user
 	Utility.Gambler(ntime);
 	
-Utility.s.close();
+Utility.scanner.close();
 }
 }

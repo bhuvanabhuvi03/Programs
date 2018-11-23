@@ -1,6 +1,6 @@
 package com.datastructure;
 
-public class calQueue {
+public class CalendarQueue {
 	   int cap=0;
 	   int front=-1;
 	   int rear=-1;
@@ -11,7 +11,7 @@ public class calQueue {
 	   * 
 	   * @param capacity size of the queue 
 	   */
-	    public calQueue(int capacity) { 
+	    public CalendarQueue(int capacity) { 
 	         this.cap = capacity; 
 	           
 	         rear = capacity-1 ; 

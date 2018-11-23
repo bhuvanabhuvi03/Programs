@@ -1,7 +1,7 @@
 
 package com.algorithmprogram;
 
-public class primeno {
+public class PrimeNumber {
 /**
  * parameter have range between two number
  * @param n

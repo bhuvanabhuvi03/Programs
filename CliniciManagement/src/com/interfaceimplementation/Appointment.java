@@ -37,7 +37,6 @@ public void setDoctor(Doctor doctor) {
 	}
 	private String specialization;
 	private String time;
-	private int noOfpatient;
 	
 	public int  getPatientID() {
 		return patientID;
@@ -52,7 +51,7 @@ public void setDoctor(Doctor doctor) {
 	public String toString() {
 		return "Appointment [patientID=" + patientID + ", doctorId=" + doctorId + ", patientName=" + patientName
 				+ ", doctorName=" + doctorName + ", specialization=" + specialization +", time="
-				+ time + ", noOfpatient=" + noOfpatient + "]";
+				+ time + "]";
 	}
 	public void setDoctorId(int i) {
 		this.doctorId = i;
@@ -69,12 +68,6 @@ public void setDoctor(Doctor doctor) {
 	}
 	public void setTime(String time) {
 		this.time = time;
-	}
-	public int getNoOfpatient() {
-		return noOfpatient;
-	}
-	public void setNoOfpatient(int noOfpatient) {
-		this.noOfpatient = noOfpatient;
 	}
 	
 	

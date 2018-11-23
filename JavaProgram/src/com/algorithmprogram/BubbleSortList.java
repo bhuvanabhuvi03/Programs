@@ -16,6 +16,8 @@ import java.util.ArrayList;
  */
 import java.util.Scanner;
 
+import com.utility.Utility;
+
 public class BubbleSortList {
 	/*
 	 * this main method for sort the element in the list
@@ -24,7 +26,7 @@ public class BubbleSortList {
 	public static void main(String[] args) {
 		Scanner s=new Scanner(System.in);
 		ArrayList<String> word=new ArrayList<String>();
-		Bubble b=new Bubble();
+		//Bubble b=new Bubble();
 
 		int size; //initialize the size of the list
 		System.out.println("enter the size");
@@ -54,7 +56,7 @@ public class BubbleSortList {
 		}System.out.println();
 		System.out.println("your sorted  list is ");
 	 //call the method for sorting
-		b.bubblesortstring(a);
+		Utility.bubbleSortString(a);
 		/*
 		 * iteration for display
 		 */

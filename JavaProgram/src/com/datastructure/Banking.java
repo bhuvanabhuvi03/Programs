@@ -9,7 +9,7 @@ public class Banking {
 	     String name[]= {"sowndar","ram","narasi"};//initialize the String array
 	     Scanner s=new Scanner(System.in);
 	     int locker=200000;//initialize the integer
-   	     MyQueuee q=new MyQueuee(5);
+   	     MyQueuee queue=new MyQueuee(5);
 	     int ch;
 	     String accname;
 	     System.out.println("enter the name");
@@ -34,7 +34,7 @@ public class Banking {
 			        	System.out.println((i+1)+"."+name[i]);
 			        }
 			        int person=s.nextInt();
-			        int depamount=q.depositMoney(depositAmount,person,name[person-1]);
+			        int depamount=queue.depositMoney(depositAmount,person,name[person-1]);
 			        System.out.println(depamount);
 			        locker=locker+depamount;
 			        System.out.println(locker);
@@ -51,13 +51,13 @@ public class Banking {
 			        
 			        
 			        int wperson=s.nextInt();
-			        int balance=q.withdraw(withdraw,wperson-1,name[wperson-1]);
+			        int balance=queue.withdraw(withdraw,wperson-1,name[wperson-1]);
 			        if(balance==0)
 			        	System.out.println(name[wperson-1]+" ur account is empty");
 			        else
 			        	System.out.println("balnce money bank have"+balance);
 			        break;
-			case 3:System.out.println("no of people in queue is "+q.isEmpty());       
+			case 3:System.out.println("no of people in queue is "+queue.isEmpty());       
 			}
 		}while(ch<4);
 	}

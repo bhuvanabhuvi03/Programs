@@ -12,6 +12,8 @@ package com.algorithmprogram;
 	import java.util.ArrayList;
 
 	import java.util.Scanner;
+
+import com.utility.Utility;
 	/*
 	 *Here we using Scanner class properties 
 	 * and create Arraylist for store the element in that list
@@ -57,7 +59,7 @@ package com.algorithmprogram;
 		 //call the method for sorting
 		
 System.out.println("sorted list is");
-		Sortt.sortString(a);
+		Utility.sortString(a);
 
 		/*
 		 * iteration for display

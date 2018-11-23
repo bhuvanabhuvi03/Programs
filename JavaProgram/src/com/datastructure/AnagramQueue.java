@@ -1,6 +1,6 @@
 package com.datastructure;
 
-public class AnaQueue {
+public class AnagramQueue {
 	/**
 	 * 
 	 * @param m passing prime 1 

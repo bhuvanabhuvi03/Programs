@@ -10,7 +10,7 @@ public static void main(String[] args) {
 	exp=s.nextLine();
 	MyStack my=new MyStack();
 //	int flag=0;
-	Bal bb=new Bal(10);
+	BalanceQueue bb=new BalanceQueue(10);
 	int flag=0;
 	char ch[]=exp.toCharArray();
 	for(int i=0;i<exp.length();i++) {

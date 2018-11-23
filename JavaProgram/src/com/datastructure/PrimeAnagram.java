@@ -11,13 +11,13 @@
 
 package com.datastructure;
 
-public class PrimeAna {
+public class PrimeAnagram {
 public static void main(String[] args) {
 	
-	int p[]=new int[200];//initialize the array
+	int primeArray[]=new int[200];//initialize the array
 	int n;
 	int count=0;//initialize the count 
-	int pp=0;//initialize var 
+	int count2=0;//initialize var 
 	/*
 	 * iterate the loop for 1000 time
 	 * find the prime 0 to 1000
@@ -34,8 +34,8 @@ public static void main(String[] args) {
 			
 			System.out.println(i);
 		    
-			p[pp]=i;//storing the data in the array
-		    pp++;
+			primeArray[count2]=i;//storing the data in the array
+		    count2++;
 		    count++;
 		}
 }
@@ -47,24 +47,24 @@ public static void main(String[] args) {
 int k=0;
 int count1=0;
 boolean b=false;
-int aa[]=new int[200];
-MyStack m=new MyStack();
+int number[]=new int[200];
+MyStack stack=new MyStack();
 /*
  * find the anagram and store in the stack 
  */
-for(int i=0;i<p.length-2;i++) {
-	for(int j=i+1;j<p.length;j++) {
-	if(p[i]!=0&&p[j]!=0)
-		b=AnaQueue.check(p[i],p[j]);
+for(int i=0;i<primeArray.length-2;i++) {
+	for(int j=i+1;j<primeArray.length;j++) {
+	if(primeArray[i]!=0&&primeArray[j]!=0)
+		b=AnagramQueue.check(primeArray[i],primeArray[j]);
 	if(b==true) {
-		System.out.println(p[i]+"  "+p[j]);
-		aa[k]=p[i];
-		m.push(p[i]);
+		System.out.println(primeArray[i]+"  "+primeArray[j]);
+		number[k]=primeArray[i];
+		stack.push(primeArray[i]);
 	//	System.out.println(aa[k]);
 		k++; 
-		aa[k]=p[j];
+		number[k]=primeArray[j];
 		k++;
-		m.push(p[j]);
+		stack.push(primeArray[j]);
 		count1++;
 //		if(p[i]==aa[k-2]) {
 //			System.out.println(p[i]+" "+aa[k-2]);
@@ -89,27 +89,27 @@ for(int i=0;i<p.length-2;i++) {
 System.out.println("this is for stack");
 System.out.println(" ************************");
 
-m.reverse();
+stack.reverse();
        System.out.println(count1); 
 System.out.println("this for queue");
 System.out.println(" ************************");
-MyQueue mq=new MyQueue(count1*2);
+MyQueue queue=new MyQueue(count1*2);
 /*
  * find the anagram and store in the queue
  */
-for(int i=0;i<p.length-2;i++) {
-	for(int j=i+1;j<p.length;j++) {
-	if(p[i]!=0&&p[j]!=0)
-		b=AnaQueue.check(p[i],p[j]);
+for(int i=0;i<primeArray.length-2;i++) {
+	for(int j=i+1;j<primeArray.length;j++) {
+	if(primeArray[i]!=0&&primeArray[j]!=0)
+		b=AnagramQueue.check(primeArray[i],primeArray[j]);
 	if(b==true) {
 		//System.out.println(p[i]+"  "+p[j]);
 		//aa[k]=p[i];
-		mq.enqueue(p[i]);
+		queue.enqueue(primeArray[i]);
 	//	System.out.println(aa[k]);
 		//k++; 
 		//aa[k]=p[j];
 		//k++;
-		mq.enqueue(p[j]);
+		queue.enqueue(primeArray[j]);
 		
 //		if(p[i]==aa[k-2]) {
 //			System.out.println(p[i]+" "+aa[k-2]);
@@ -126,7 +126,7 @@ for(int i=0;i<p.length-2;i++) {
 //int a=mq.dequeue();
 //System.out.println(a);
 //}
-System.out.println(mq);
+System.out.println(queue);
 
 
 }

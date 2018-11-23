@@ -5,7 +5,7 @@ public class Day {
 	 * calculate the number of days in the month
 	 * calculate year code , month code 
 	 */
-	static CalDisplay c = new CalDisplay();
+	static CalendarDisplay c = new CalendarDisplay();
 	public static int t = 0;
 
 	static void findday(int year, String month) {

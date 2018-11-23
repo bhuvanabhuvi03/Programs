@@ -14,6 +14,8 @@ package com.algorithmprogram;
  */
 import java.util.Scanner;
 
+import com.utility.Utility;
+
 public class binarySearch {
 /*
  * main method for find the elapsed time between searching process
@@ -38,7 +40,7 @@ public class binarySearch {
 	//initialize the start time in  long form default package in java 
 	long st=System.nanoTime();//start time taken in  long form default package in java
 	// call the search method over here
-	inSearch.searchint(ar,0,ar.length, key);
+	Utility.searchint(ar,0,ar.length, key);
 	//initialize the stop time 
 	
 	long ss=System.nanoTime();//stop time taken in  long form default package in java
@@ -58,7 +60,7 @@ public class binarySearch {
 	
 	long st2=System.nanoTime();//start time taken in  long form default package in java
 	// call the search method over here
-	inSearch.searchstr(str,str1,0,str.length);
+	Utility.searchstr(str,str1,0,str.length);
 	//initialize the stop time in  long form default package in java 
 
 	long ss2=System.nanoTime();//stop time taken in  long form default package in java
