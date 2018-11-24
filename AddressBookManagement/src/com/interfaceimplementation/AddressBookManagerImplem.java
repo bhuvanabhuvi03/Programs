@@ -82,10 +82,16 @@ String name;
 		File ff=new File("/home/bridgeit/Desktop/2d/address/");
 		File[] fi=ff.listFiles();
 //		int i=0;
+		if(fi.length==0) {
+			return null;
+		}
+		else {
 for (File file2 : fi) {
 	file2.getName();
+	if(file2.getName()!=null) {
 	System.out.println(file2.getName());
 }
+	}
 //	int choice;
 	System.out.println("enter your choice");
 
@@ -93,6 +99,8 @@ for (File file2 : fi) {
 
 		
 		return filee;
+
+		}
 	}
 
 	@Override

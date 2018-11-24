@@ -160,7 +160,7 @@ String filen="/home/bridgeit/Desktop/2d/address/"+filename;
 
    }
    
-public   static void  readbook(String filename) {
+public   static void  readbook(String fileName) {
 	   
 	   
 	   
@@ -169,7 +169,7 @@ public   static void  readbook(String filename) {
 	   
 	//   System.out.println(filename);
 		JSONParser jsonParser=new JSONParser();
-		File f=new File(filename);
+		File f=new File(fileName);
 		try {
 			Object o=(Object)jsonParser.parse(new FileReader(f));
 			
