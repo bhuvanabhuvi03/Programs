@@ -1,5 +1,7 @@
 package com.module;
 
+
+
 public class PersonDetail implements Comparable<PersonDetail>{
 
 	
@@ -35,5 +37,8 @@ public class PersonDetail implements Comparable<PersonDetail>{
 int comparezip=(int)o.getPersonaddress().getZipcode();
 		return (int) (this.personaddress.getZipcode()-comparezip);
 	}
+	
+	
+	
 	
 }

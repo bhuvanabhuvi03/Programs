@@ -194,7 +194,7 @@ public class CustomerInJson
 		}
 		return pName;
 	}
-	static void printCustomerDetail()
+	public static void printCustomerDetail()
 	{
 		File file=new File("/home/bridgeit/Desktop/2d/customerdetail.json");
 		if(file.length()==0)

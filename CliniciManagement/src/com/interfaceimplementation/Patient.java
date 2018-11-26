@@ -37,4 +37,7 @@ public class Patient {
 	public void setAge(int age) {
 		this.age = age;
 	}
+    public int compareTo(Patient other) {
+        return name.compareTo(other.name);
+    }
 }

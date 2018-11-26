@@ -19,7 +19,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-public class StockAccount 
+public class StockAcc 
 {
 	Scanner scanner=new Scanner(System.in);
 	String symbol;
@@ -30,7 +30,7 @@ public class StockAccount
  	TransactionInJson transactionInJson=new TransactionInJson();
  	ObjectMapper mapper=new ObjectMapper();
 	@SuppressWarnings("unchecked")
-	public StockAccount() 
+	public StockAcc() 
 	{
 
     	Object obj,obj1,obj2;

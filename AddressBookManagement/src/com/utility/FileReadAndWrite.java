@@ -19,7 +19,7 @@ import com.module.PersonDetail;
 public class FileReadAndWrite {
 	static JSONParser parser=new JSONParser();
 	static ObjectMapper mapper=new ObjectMapper();
-	static JSONArray jsona=new JSONArray();
+	static JSONArray jsonarray=new JSONArray();
    public static void fileWrite(PersonDetail person,String filename) {
 	//System.out.println(jsnarray);
 	
@@ -30,10 +30,10 @@ public class FileReadAndWrite {
 			json=json+mapper.writeValueAsString(person)+"]";
 		else {
 			Object ob=parser.parse(new FileReader(file));
-			jsona=(JSONArray)ob;
-			for(int i=0;i<jsona.size();i++) {
+			jsonarray=(JSONArray)ob;
+			for(int i=0;i<jsonarray.size();i++) {
 				
-				json=json+jsona.get(i)+",";
+				json=json+jsonarray.get(i)+",";
 				
 				
 				
@@ -82,18 +82,18 @@ public class FileReadAndWrite {
 	   		*/		/*Object ob=parser.parse(new FileReader(file));
 	   				jsona=(JSONArray)ob;*/
 	   				int temp=0;
-	   				for(int i=0;i<jsona.size()-1;i++) {
+	   				for(int i=0;i<jsonarray.size()-1;i++) {
 	   					temp=i;
 
 	   					json=mapper.writeValueAsString(person.get(0))+",";
 	   					
 	   					
 	   				}
-	   				if(jsona.size()>1) {
+	   				if(jsonarray.size()>1) {
 	   					json=mapper.writeValueAsString(person.get(temp+1));
 	   				}
 	   				//temp++;
-	   				if(jsona.size()==0) {
+	   				if(jsonarray.size()==0) {
 	   				json=mapper.writeValueAsString(person);
 	   				
 	   				}
@@ -114,9 +114,9 @@ public class FileReadAndWrite {
 	      
    public static void fileWrites(ArrayList<PersonDetail> person,String filename) {
 	   
-String filen="/home/bridgeit/Desktop/2d/address/"+filename;
+String filepath="/home/bridgeit/Desktop/2d/address/"+filename;
 		String json=null;
-		File file =new File(filen);
+		File file =new File(filepath);
 		try {
 			/*if(file.length()==0)
 				json=json+mapper.writeValueAsString(person.get(0))+"]";
@@ -130,23 +130,23 @@ String filen="/home/bridgeit/Desktop/2d/address/"+filename;
 		*/		/*Object ob=parser.parse(new FileReader(file));
 				jsona=(JSONArray)ob;*/
 				int temp=0;
-				for(int i=0;i<jsona.size()-1;i++) {
+				for(int i=0;i<jsonarray.size()-1;i++) {
 					temp=i;
 
 					json=mapper.writeValueAsString(person.get(0))+",";
 					
 					
 				}
-				if(jsona.size()>1) {
+				if(jsonarray.size()>1) {
 					json=mapper.writeValueAsString(person.get(temp+1));
 				}
 				//temp++;
-				if(jsona.size()==0) {
+				if(jsonarray.size()==0) {
 				json=mapper.writeValueAsString(person);
 				
 				}
 			
-			FileWriter filewrite=new FileWriter(filen);
+			FileWriter filewrite=new FileWriter(filepath);
 
 			filewrite.write(json);
 			filewrite.flush();
@@ -169,9 +169,9 @@ public   static void  readbook(String fileName) {
 	   
 	//   System.out.println(filename);
 		JSONParser jsonParser=new JSONParser();
-		File f=new File(fileName);
+		File file=new File(fileName);
 		try {
-			Object o=(Object)jsonParser.parse(new FileReader(f));
+			Object o=(Object)jsonParser.parse(new FileReader(file));
 			
 			JSONArray jsonArray=(JSONArray)o;
 		//	System.out.println(jsonArray);

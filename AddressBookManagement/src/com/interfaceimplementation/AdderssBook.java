@@ -14,5 +14,5 @@ void print(ArrayList<PersonDetail>personlist);
 ArrayList<PersonDetail> exit(ArrayList<PersonDetail> filename);
 
 void sortByZip(ArrayList<PersonDetail> personlist);
-
+void sortByName(ArrayList<PersonDetail>personlist);
 }

@@ -222,7 +222,7 @@ public class CliniciManagement {
 				System.out.println(doctor);
 				Patient patient = searchImplementation.searchByPatientId(patientid, listPatient);
 				System.out.println(doctor.getNumbeOfPatient());
-				if (doctor.getId() > 5) {
+				if (doctor.getNumbeOfPatient()<  5) {
 					entryImple.fixAppointment(doctor, patient);
 				} else {
 					System.out.println("full");

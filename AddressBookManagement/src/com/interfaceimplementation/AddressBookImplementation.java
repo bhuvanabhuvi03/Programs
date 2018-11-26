@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 import org.codehaus.jackson.map.ObjectMapper;
@@ -266,6 +267,30 @@ String name;
 		return list;
 		// TODO Auto-generated method stub
 		
+		
+	}
+
+	@Override
+	public void sortByName(java.util.ArrayList<PersonDetail> personlist) {
+		// TODO Auto-generated method stub
+Collections.sort(personlist, new Comparator<PersonDetail>() {
+	@Override
+	public int compare(PersonDetail o1, PersonDetail o2) {
+		// TODO Auto-generated method stub
+		return o1.getFirstName().compareTo(o2.getFirstName());
+	}
+});
+	
+
+		System.out.println(personlist);
+		Collections.sort(personlist);
+		for(int i=0;i<personlist.size();i++) {
+			System.out.println(personlist.get(i));
+		}
+		
+		
+		
+
 		
 	}
 

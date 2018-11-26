@@ -26,7 +26,7 @@ static String filename;
 	static ArrayList<PersonDetail>newlist=new ArrayList<>();
 static String Filenamepath=null;	
 static	Scanner s=new Scanner(System.in);
-static ArrayList<PersonDetail>personlist=new ArrayList<>();
+static ArrayList<PersonDetail>personlist;
 
 static	ArrayList<PersonDetail> list =new ArrayList();
 
@@ -39,7 +39,7 @@ static ArrayList<PersonDetail> modifiedlist(ArrayList<PersonDetail> personlist) 
     AddressBookImplementation addressBookImplementation=new AddressBookImplementation();
     String say="yes";
 do {
-	System.out.println("\n1.addnewperson\n2.editpersondetail\n3.deletepersondetail\n4.sortbyzip\n5.print\n6.exit");
+	System.out.println("\n1.addnewperson\n2.editpersondetail\n3.deletepersondetail\n4.sortbyzip\n5.print\n.6.sort by name\n6.exit");
 	System.out.println("enter the choice ");
 
 	choice=s.nextInt();
@@ -68,6 +68,9 @@ do {
 		addressBookImplementation.print(personlist);
 		break;
 	case 6:
+		addressBookImplementation.sortByName(personlist);
+		break;
+	case 7:
 	 //   personlist=addressBookImplementation.exit(personlist);
 	   //return personlist;
 	   System.out.println("close");
@@ -122,7 +125,7 @@ public static void main(String[] args) {
 			
 			if(b==true) {
 				if(f.listFiles().length==0) {
-				list=addressbookmanager.createAddressBook();
+				personlist=addressbookmanager.createAddressBook();
 				System.out.println(list);
       			FileReadAndWrite.fileWritess(personlist, path);
 
@@ -156,12 +159,12 @@ public static void main(String[] args) {
 				//	FileReadAndWrite.fileWrites(list, filess[filess.length-1]);
 			addressbookmanager.save(list,files[count-2]);
 			System.out.println(files[count-2]);
-					list=addressbookmanager.createAddressBook();
+					personlist=addressbookmanager.createAddressBook();
 					
 					}
 					else {
-						list=addressbookmanager.createAddressBook();	
-						addressbookmanager.save(list,filename);
+						personlist=addressbookmanager.createAddressBook();	
+						addressbookmanager.save(personlist,filename);
 
 }
 
@@ -199,16 +202,19 @@ if(filelist1.length!=0) {
 		case 3:
 			System.out.println(Filenamepath);
 			System.out.println("do want to save the file ");
-			addressbookmanager.save(list, filename);
-			System.out.println(list);
+			
+			addressbookmanager.save(personlist, filename);
+		//	System.out.println(list);
 			System.out.println("save ");
 			//save();
 			break;
 		case 4:
-			
+
+			f=new File("/home/bridgeit/Desktop/2d/address/");
+			filelist1=f.listFiles();
 			if(filelist1.length!=0) {
 			
-			System.out.println(Filenamepath);
+		//	System.out.println(Filenamepath);
 			if(Filenamepath==null) {
 				System.out.println("currently all files are closed");
 			}else {

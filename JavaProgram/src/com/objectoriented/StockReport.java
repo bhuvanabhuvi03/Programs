@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 import org.json.simple.parser.ParseException;
 
+import com.stockreport.CustomerInJson;
+
 public class StockReport {
 	@SuppressWarnings({ "unused", "static-access", "resource" })
 	public static void main(String[] args) 
