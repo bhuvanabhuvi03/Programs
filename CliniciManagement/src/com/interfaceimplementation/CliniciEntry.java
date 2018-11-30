@@ -2,6 +2,9 @@ package com.interfaceimplementation;
 
 import java.util.ArrayList;
 
+import com.model.Doctor;
+import com.model.Patient;
+
 public interface CliniciEntry {
 
 //void addPatientDetail();

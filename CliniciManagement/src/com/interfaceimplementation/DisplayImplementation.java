@@ -8,6 +8,10 @@ import java.util.ArrayList;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
 
+import com.model.Appointment;
+import com.model.Doctor;
+import com.model.Patient;
+
 public class DisplayImplementation implements DisplayInterface{
 static ObjectMapper mapper=new ObjectMapper();
 	@Override

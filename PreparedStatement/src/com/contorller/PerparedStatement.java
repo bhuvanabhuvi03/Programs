@@ -3,8 +3,8 @@ package com.contorller;
 import java.util.Scanner;
 
 import com.model.Student;
-import com.respository.DataBaseRespository;
-import com.respository.RespositoryImpl;
+import com.respository.PerparedStatementInterface;
+import com.respository.PerparedImplementation;
 import com.services.ServiceImple;
 import com.services.ServiceInter;
 
@@ -19,7 +19,7 @@ public static void main(String[] args) {
 		System.out.println("1.insert student\n2.delete\n3.update\n4.read\n.5.quit");
 		System.out.println("enter the choice");
 		choice=scanner.nextInt();
-		DataBaseRespository respository =new RespositoryImpl();
+		PerparedStatementInterface respository =new PerparedImplementation();
 
 		switch(choice) {
 		case 1:

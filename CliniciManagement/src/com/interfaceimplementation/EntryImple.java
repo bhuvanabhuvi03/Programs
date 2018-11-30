@@ -14,6 +14,10 @@ import org.codehaus.jackson.type.TypeReference;
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
 
+import com.model.Appointment;
+import com.model.Doctor;
+import com.model.Patient;
+
 public class EntryImple implements CliniciEntry {
 	static Scanner scanner = new Scanner(System.in);
 	static ArrayList<Patient> patientlist = new ArrayList<>();

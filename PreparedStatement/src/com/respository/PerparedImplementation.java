@@ -5,16 +5,21 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
+
 import java.util.Scanner;
 
 import com.model.Student;
 
-public class RespositoryImpl implements DataBaseRespository{
+public  class PerparedImplementation implements PerparedStatementInterface{
+	
 	static ResultSet resultSet;
 	static Connection con;
 	static Scanner scanner=new Scanner(System.in);
 	static PreparedStatement  statement;
+	
+	
+	
+	
 	@Override
 	public void createStudent(Student student) {
 

@@ -8,6 +8,9 @@ import java.util.Scanner;
 
 import org.codehaus.jackson.map.ObjectMapper;
 
+import com.model.Doctor;
+import com.model.Patient;
+
 
 public class SearchImplementation implements SearchInterface {
 	static Scanner scanner=new Scanner(System.in);

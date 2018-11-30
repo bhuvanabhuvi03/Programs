@@ -1,4 +1,4 @@
-package com.interfaceimplementation;
+package com.model;
 
 public class Patient {
 

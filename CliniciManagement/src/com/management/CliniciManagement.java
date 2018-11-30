@@ -13,10 +13,10 @@ import org.omg.CORBA.OMGVMCID;
 
 import com.interfaceimplementation.DisplayImplementation;
 import com.interfaceimplementation.DisplayInterface;
-import com.interfaceimplementation.Doctor;
 import com.interfaceimplementation.EntryImple;
-import com.interfaceimplementation.Patient;
 import com.interfaceimplementation.SearchImplementation;
+import com.model.Doctor;
+import com.model.Patient;
 
 public class CliniciManagement {
 	static Scanner scanner = new Scanner(System.in);

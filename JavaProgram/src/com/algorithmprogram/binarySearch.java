@@ -23,7 +23,6 @@ public class binarySearch {
 	public static void main(String[] args) {
 	Scanner s=new Scanner(System.in);
 	
-	inSearch ii=new inSearch();
 	
 	//initialize  the array of string
 	String str[]= {"aaaa","bbbb","cccc","dddd","eeee","ffff","gggg"};

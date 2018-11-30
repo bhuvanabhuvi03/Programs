@@ -1,4 +1,4 @@
-package com.interfaceimplementation;
+package com.model;
 
 import java.time.LocalTime;
 

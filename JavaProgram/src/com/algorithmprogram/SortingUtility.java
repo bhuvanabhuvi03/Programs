@@ -74,7 +74,7 @@ System.out.println();
 	//initialize  the array of string
 
 	String stin[]= {"bbbb","ffff","aaaa","qqqq","ssss","gggg","llll","wwww"};
-	Sortt ss=new Sortt();
+	//Sortt ss=new Sortt();
 	//initialize the start time in  long form default package in java 
 
 	double starttime=System.nanoTime();//start time taken in  long form default package in java

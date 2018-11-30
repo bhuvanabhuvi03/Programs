@@ -1,5 +1,5 @@
 
-package com.interfaceimplementation;
+package com.model;
 
 public class Doctor {
 @Override
