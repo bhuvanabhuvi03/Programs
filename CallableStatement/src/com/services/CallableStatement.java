@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 import com.controller.ServiceImple;
 import com.model.Student;
-import com.repository.DataBaseRespositoryImple;
-import com.repository.DataBaseRespositoryInterface;
+import com.repository.CallableImplementation;
+import com.repository.CallableInterface;
 
 
 public class CallableStatement {
@@ -19,7 +19,7 @@ int choice;
 		System.out.println("1.insert student\n2.delete\n3.update\n4.read\n.5.quit");
 		System.out.println("enter the choice");
 		choice=scanner.nextInt();
-		DataBaseRespositoryInterface baseRespository=new DataBaseRespositoryImple();
+		CallableInterface baseRespository=new CallableImplementation();
 
 		switch(choice) {
 		case 1:

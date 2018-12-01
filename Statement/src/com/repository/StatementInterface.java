@@ -9,7 +9,7 @@ import java.util.Scanner;
 import com.model.Student;
 
 
-public class DataBaseImpl implements DataBaseRespository{
+public class StatementInterface implements StatementImplement{
 
 	
 	static ResultSet resultSet;

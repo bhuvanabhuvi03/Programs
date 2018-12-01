@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 import com.model.Student;
 import com.mysql.jdbc.ResultSet;
-import com.repository.DataBaseImpl;
-import com.repository.DataBaseRespository;
+import com.repository.StatementInterface;
+import com.repository.StatementImplement;
 import com.services.ServiceImpl;
 import com.services.ServiseInter;
 
@@ -26,7 +26,7 @@ public static void main(String[] args) {
 		System.out.println("1.insert student\n2.delete\n3.update\n4.read\n.5.quit");
 		System.out.println("enter the choice");
 		choice=scanner.nextInt();
-		DataBaseRespository baseRespository=new DataBaseImpl();
+		StatementImplement baseRespository=new StatementInterface();
 
 		switch(choice) {
 		case 1:

@@ -34,14 +34,14 @@ public  class PerparedImplementation implements PerparedStatementInterface{
 			Class.forName("com.mysql.jdbc.Driver")	;
 
 			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/college","root","root");
-			System.out.println(con);
+		//	System.out.println(con);
 		statement=con.prepareStatement("insert into cse1(name,grade) values(?,?)");
-	System.out.println(statement);
+//	System.out.println(statement);
 		statement.setString(1,name);
-		System.out.println(statement);
+	//	System.out.println(statement);
 		statement.setString(2, grade);
-		System.out.println(statement);
-		System.out.println("hi"+statement);
+	//	System.out.println(statement);
+	//	System.out.println("hi"+statement);
 		statement.executeUpdate();
 		
 		 resultSet=statement.executeQuery("select * from cse1");

@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 import com.model.Student;
 
-public class DataBaseRespositoryImple implements DataBaseRespositoryInterface{
+public class CallableImplementation implements CallableInterface{
 	static Connection con;
 	static  CallableStatement statement;
 	static Scanner scanner=new Scanner(System.in);
