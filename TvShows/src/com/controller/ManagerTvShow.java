@@ -19,7 +19,8 @@ public class ManagerTvShow {
 	static ShowDetail detail;
 	static ManagerService managerService=new ManagerImple();
 	static TvshowInterface baseRepository=new TvShowImplementation();
-public static void main(String[] args) {
+	
+	public static void main(String[] args) {
 	
 	do {
 	System.out.println("1.log in \n2.add client in the table \n3.delete client in the table \n4.upadte client in the table\n5.read the client detail in the table\n6.add show \n7.view shows and rate\n8.quit");
