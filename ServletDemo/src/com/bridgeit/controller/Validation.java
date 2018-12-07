@@ -42,7 +42,6 @@ while(resultSet.next()) {
 }if(flag==0) {
 	printWriter.println("you  are not authorzied person to access the file");
 	printWriter.println("<html><boby><a href='register.html'>register</a></body></html>");
-	System.out.println("sd");
 }
 
     }catch (Exception e) {
