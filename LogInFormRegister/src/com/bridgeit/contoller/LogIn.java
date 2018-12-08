@@ -31,7 +31,7 @@ public class LogIn extends HttpServlet{
 			
 	        PreparedStatement ps = con
 	                .prepareStatement("select * from servlet");
-	        //System.out.println(ps);
+	        System.out.println(ps);
 	        ResultSet resultSet=ps.executeQuery();
 	        //System.out.println(resultSet);
 	while(resultSet.next()) {

@@ -25,16 +25,20 @@ public class RegisterFrom extends HttpServlet{
 	 String lastName=request.getParameter("lastname");
 	 String  email=request.getParameter("email");
 	 String password=request.getParameter("password");
+	 String  role=request.getParameter("role");
 	 int flag=0;
 	try {
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/college","root","root");
-	
+	System.out.println(connection);
 		PreparedStatement ps=connection.prepareStatement("select * from servlet");
+		System.out.println(ps);
 		ResultSet rs=ps.executeQuery();
-		
+		System.out.println("aaqq"+flag);
+		System.out.println(rs);
+		System.out.println("aa");
 	/*	while(rs.next()!=false) {
-		System.out.println(rs.getString(4));
+		System.out.println(rs.getString(4));s
 		}*/
 		
 		
@@ -48,15 +52,17 @@ public class RegisterFrom extends HttpServlet{
 			}	
 			
 		}
+		System.out.println(flag);
 		if(flag==0)
 		{
 		
-		
-		PreparedStatement preparedStatement=connection.prepareStatement("insert into  servlet(firstname,lastname,email,password) values(?,?,?,?)");
+		System.out.println("ssss");
+		PreparedStatement preparedStatement=connection.prepareStatement("insert into  servlet(firstname,lastname,email,password,role) values(?,?,?,?,?)");
 		preparedStatement.setString(1, firstName);
 		preparedStatement.setString(2, lastName);
 		preparedStatement.setString(3, email);
 		preparedStatement.setString(4, password);
+		preparedStatement.setString(5, role);
 		int i = preparedStatement.executeUpdate();
 	    if (i > 0)
 	        printWriter.print("You are successfully registered...");
